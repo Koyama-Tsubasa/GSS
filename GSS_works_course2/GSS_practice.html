@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,61 +11,69 @@
     <link rel="stylesheet" href="./css/uikit.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>圖書館</title>
+
 </head>
+
 <body>
+
     <header>
         <nav class="navbar">
             <h1 class="navbar-title text-center">圖書管理系統</h1>
         </nav>
     </header>
+
     <main>
         <div class="uk-container align-center">
 
-            <div id="add-button">
-                <button class="k-button k-primary">新增書籍</button>
+            <div>
+                <button id="add-button" class="k-button k-primary"> 新增書籍 </button>
             </div><br>
 
-            <div class="detail" id="window" style="display: none">
+            <div id="window" style="display: none">
                 <ul class="fieldlist">
                     <li>
-                        <img class="book-image" src="image/database.jpg" alt="NO">
+                        <img class="book-image" src="image/database.jpg" alt="NOImage">
                     </li>
                     <li>
                         <label>圖書類別</label>
-                        <select id="book_category" style="width: 100%;">
-                        </select>
+                        <select id="book_category" style="width: 100%;"></select>
                     </li>
                     <li>
                         <label>書名</label>
                         <input id="book_name" name="Book Name" required type="text" class="k-textbox" style="width: 100%;" />
+                        <!-- required => 讓使用者一定要輸入書名 -->
                     </li>
                     <li>
                         <label>作者</label>
                         <input id="book_author" name="Book Author" required type="text" class="k-textbox" style="width: 100%;" />
+                        <!-- required => 讓使用者一定要輸入作者 -->
                     </li>
                     <li>
                         <label>購買日期</label>
-                        <input id="bought_datepicker" value="10/10/2011" title="datepicker" style="width: 100%" />
-                        <!-- <input type="text" class="k-textbox" style="width: 100%;" /> -->
+                        <input id="bought_datepicker" title="datepicker" style="width: 100%" />
                     </li>
                     <li class="uk-text-right">
-                        <button class="k-button k-primary btn-add-book">新增</button>
+                        <button class="k-button k-primary" id="btn-conadd-book">繼續新增</button>
+                        <button class="k-button k-primary" id="btn-addclose-book">新增並離開</button>
                     </li>
                 </ul>
             </div>
 
-            <div id="book_grid">
-            </div>
+            <div id="book_grid"></div>
+
         </div>
         
     </main>
 
     <footer>
     </footer>
+
 </body>
+
 <script type="text/javascript" src="data/book-data.js"></script>
 <script src="./js/jquery-2.1.4.min.js"></script>
 <script src="./js/kendo.all.min.js"></script>
 <script src="./js/uikit.min.js"></script>
 <script src="./js/script.js"></script>
+
 </html>
