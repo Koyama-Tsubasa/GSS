@@ -57,7 +57,7 @@ $(function() {
             var newBC = $("#book_category").data("kendoDropDownList").text();
             var newBN = $("#book_name").val();
             var newBA = $("#book_author").val();
-            var newBD = $("#bought_datepicker").val();
+            var newBD = $("#bought_datepicker").data("kendoDatePicker").value();
             var Ndata = {
                 "BookId":MAXID(),
                 "BookCategory":newBC,
@@ -125,9 +125,10 @@ $(function(){
         change: onChange
     });
     
-    /* 讓原本的日期調成 yyyy-mm-dd 形式 */
+    /* 讓原本的日期調成 yyyy-mm-dd 形式, 並改成只能輸入有效的日期 */
     $("#bought_datepicker").kendoDatePicker({
         value: new Date(),
+        dateInput: true,
         format: "yyyy-MM-dd"
     });
 
